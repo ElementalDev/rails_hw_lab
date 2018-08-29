@@ -2,27 +2,15 @@ Rails.application.routes.draw do
 
   resources :books
 
-  # get 'books/index'
-  #
-  # get 'books/show'
-  #
-  # get 'books/new'
-  #
-  # post 'books/create'
-  #
-  # delete 'books/destroy'
-  #
-  # get 'books/edit'
-  #
-  # put 'books/update'
-  #
-  get '/', to: "books#index"
+  get '/books', to: "books#index"
 
   get '/books/new', to: "books#new"
 
-  post '/books', to: "books#create"
+  post '/books/create', to: "books#create"
 
   get '/books/show', to: "books#show"
+
+  get '/books/show_one', to: "books#show_one"
 
   get '/books/edit', to: "books#edit"
 
